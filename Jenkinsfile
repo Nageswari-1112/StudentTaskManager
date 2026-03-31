@@ -3,12 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                git branch: 'main', url: 'https://github.com/nageswari-1112/StudentTaskManager.git'
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
                 sh 'docker build -t student-task-manager .'
